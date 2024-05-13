@@ -33,16 +33,15 @@ public class Employee {
     private String employment_status;
     @Column(name = "manager_id",length = 10)
     private String manager_id;
-
+    @Column(name = "timekeeping_id",length = 10)
+    private String timekeeping_id;
     public Employee() {
     }
 
-    public Employee(String employee_id
-            , String full_name, Date dob
-            , String phone_number, String gender
-            , String email, String address
-            , Date start_date, double salary
-            , String employment_status, String manager_id) {
+    public Employee(String employee_id, String full_name
+            , Date dob, String phone_number, String gender, String email
+            , String address, Date start_date, double salary, String employment_status
+            , String manager_id, String timekeeping_id) {
         this.employee_id = employee_id;
         this.full_name = full_name;
         this.dob = dob;
@@ -54,6 +53,7 @@ public class Employee {
         this.salary = salary;
         this.employment_status = employment_status;
         this.manager_id = manager_id;
+        this.timekeeping_id = timekeeping_id;
     }
 
     public String getEmployee_id() {
@@ -87,6 +87,8 @@ public class Employee {
     public void setPhone_number(String phone_number) {
         this.phone_number = phone_number;
     }
+
+
 
     public String getGender() {
         return gender;
@@ -142,5 +144,12 @@ public class Employee {
 
     public void setManager_id(String manager_id) {
         this.manager_id = manager_id;
+    }
+    public String getTimekeeping_id() {
+        return timekeeping_id;
+    }
+
+    public void setTimekeeping_id(String timekeeping_id) {
+        this.timekeeping_id = timekeeping_id;
     }
 }
